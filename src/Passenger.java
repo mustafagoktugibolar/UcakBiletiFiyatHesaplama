@@ -1,3 +1,4 @@
+
 public class Passenger implements Ticket{
     private int age;
     private int distance;
@@ -6,11 +7,7 @@ public class Passenger implements Ticket{
     private double km = 0.1;
     private double discount;
 
-
-    public Passenger(int age, int distance, boolean twoWay) {
-        this.age = age;
-        this.distance = distance;
-        this.twoWay = twoWay;
+    public Passenger() {
     }
 
     public int getAge() {
@@ -43,13 +40,13 @@ public class Passenger implements Ticket{
             discount = 0.5; 
         }
         else if(age <= 24){
-            discount = 0.1;
+            discount = 0.9;
         }
         else if(age >= 65){
-            discount = 0.3;
+            discount = 0.7;
         }
         else{
-            discount = 0;
+            discount = 1;
         }    
     }
     @Override
@@ -69,7 +66,7 @@ public class Passenger implements Ticket{
             System.out.println("Unvalid process!");
         }
         if(twoWay == true){
-            price = ((price * 4) / 10);
+            price = ((price * 16) / 10);
         }   
     }  
 }
